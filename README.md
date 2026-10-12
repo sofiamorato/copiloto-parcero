@@ -1,5 +1,20 @@
 # Copiloto Parcero
 
+## Entrega del equipo `sofia_morato` (COH-3)
+
+| | |
+| --- | --- |
+| Equipo (como aparece en la tabla) | `sofia_morato` |
+| Integrantes | Sofía Morato |
+| Video (inglés, máx. 3 min) | [COMPLETAR enlace] |
+| Puntaje final del set oculto | [COMPLETAR con el último envío] |
+
+**Qué funciona y qué no:** el prompt traduce las claves en inglés del estado del carro a las palabras que usa la persona (`fog_lights` = antiniebla) y convierte cada política en una secuencia de llamadas; eso resolvió los conflictos de luces y el desempañador. Todavía falla de forma intermitente en peticiones de varios pasos, y el puntaje público (~88) sobreestima el oculto (~64): con un solo intento por caso, el modelo varía ±3 puntos entre envíos.
+
+Evidencia: historial de versiones y análisis en [`eval/registro.md`](eval/registro.md), prompts de cada versión en [`eval/prompts/`](eval/prompts/), corridas en [`eval/runs/`](eval/runs/), casos propios en [`eval/mis_casos.jsonl`](eval/mis_casos.jsonl), [`REFLEXION.md`](REFLEXION.md) y [`AI_LOG.md`](AI_LOG.md).
+
+---
+
 Reto para llevar a casa del taller **AI and Autonomous Driving Research at THI** (Technische Hochschule Ingolstadt, HCIS Lab). 24 horas. Un solo archivo para editar: `system_prompt.md`.
 
 > **English summary.** In the workshop you talked to an in-car voice assistant inside a simulated vehicle. That assistant ran on the system prompt you now find in `system_prompt.md`. Your job over the next 24 hours is to improve that prompt so the assistant (a) sounds like a real Colombian, (b) handles single-step, multi-step, ambiguous and unsafe requests well, and (c) scores as high as possible on a hidden test set. Everyone is graded with the same fixed open-weight model, so what counts is your prompt, not your budget. You submit the prompt to the benchmark server (web form or `scripts/submit.py`) and get a score back within minutes; the last accepted submission before your cohort deadline is official. Final package: your repository, a 3-minute English video, a short reflection and an AI-use log (see `docs/ENTREGA.md`). The rest of this document is in Spanish.
@@ -12,11 +27,11 @@ La persona facilitadora los dicta en el taller. Anótalos aquí para no perderlo
 
 | | |
 | --- | --- |
-| Servidor de evaluación | `https://SERVIDOR` |
-| Código de acceso | `CODIGO` |
-| Modelo fijo con el que se califica | `MODELO` |
-| Fecha y hora límite de tu cohorte | `FECHA_LIMITE` (hora de Colombia) |
-| Canal de ayuda | `CANAL` |
+| Servidor de evaluación | `https://copiloto-parcero-api.onrender.com/` |
+| Código de acceso | `parceroC` (cohorte COH-3) |
+| Modelo fijo con el que se califica | `openai/gpt-oss-120b` |
+| Fecha y hora límite de tu cohorte | lunes 12 de octubre de 2026, 14:00 (hora de Colombia) |
+| Canal de ayuda | https://discord.gg/q2U5AY4qC |
 
 ---
 
