@@ -4,6 +4,7 @@ Meta: el puntaje más alto de las cuatro cohortes en el set oculto (32 casos, 8 
 
 ## Reglas duras
 
+- Git es solo de Sofía. Nunca ejecutes `git add`, `git commit`, `git push` ni `git config`, y no agregues líneas `Co-Authored-By` ni firmas tuyas a ningún mensaje de commit. Cuando una versión esté lista, dile a Sofía el mensaje de commit sugerido y ella lo hace. Sí puedes usar comandos de solo lectura (`git status`, `git diff`, `git log`).
 - Nunca envíes al set oculto por tu cuenta. Todo `scripts/submit.py` que corras lleva `--dev`; sin `--dev` es un envío oculto. Solo hay 8 por 24 h y cada uno lo autoriza Sofía en el chat con la palabra "ENVÍA".
 - Set público: máximo 10 pruebas por hora. Lleva la cuenta y avisa antes de llegar al límite.
 - Solo se edita el texto dentro del bloque ``` ``` de `system_prompt.md`. Conserva `{{current_datetime}}` y `{{vehicle_context}}` y no pases de 12.000 caracteres. Corre `python -m cpbench check system_prompt.md` antes de cada prueba.
@@ -36,7 +37,7 @@ python -m cpbench validate eval/mis_casos.jsonl
    - voz o formato.
 4. Compara con la versión anterior: qué casos arregló y cuáles rompió. Si rompe más de lo que arregla, revierte.
 5. Agrega una fila a `eval/registro.md` con estas columnas: versión, cambio, público (total, tareas, voz), oculto (si hubo envío), casos arreglados o rotos, conclusión.
-6. Haz un commit por versión: `git commit -am "vN: <cambio>"`.
+6. Cuando la versión esté lista, escribe en el chat un mensaje de commit sugerido (`vN: <cambio>`) y detente. Sofía hace el commit y el push.
 7. Después de cada envío oculto, copia en el registro el desglose por categoría y las pistas tal como las da el servidor. Son la única información sobre el set real.
 
 ## Trampas del calificador (verificadas en scoring.py)
