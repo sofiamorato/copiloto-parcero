@@ -1,6 +1,6 @@
 # Registro de uso de IA
 
-**Asistentes usados** (ChatGPT, Claude, Gemini, Copilot, otros) y para qué (ideas, redacción del prompt, análisis de fallos, casos de prueba, video):
+**Asistentes usados** (ChatGPT, Claude, Gemini, Copilot, otros) y para qué (ideas, redacción del prompt, análisis de fallos, casos de prueba):
 
 - **Claude Code (Claude Opus y Sonnet, en VS Code):**
   - analizar los JSON de cada corrida caso por caso;
@@ -11,7 +11,6 @@
   - hacer los borradores de estos documentos.
 
   Los envíos al set oculto y los commits los hice yo: la IA tenía prohibido hacerlos (ver `CLAUDE.md`).
-- [COMPLETAR si usaste otros]
 
 **Tres prompts que me sirvieron** (pégalos o resúmelos, y di qué salió de cada uno):
 
@@ -23,6 +22,8 @@
 
 En v4 le pedí analizar por qué dev-17 seguía fallando. Concluyó que era "un patrón de alineamiento del modelo más fuerte que cualquier instrucción" y recomendó dejar de intentarlo. En la misma revisión atribuyó a variancia dos fallos que eran `HTTP 429` del servidor. Ninguna de las dos conclusiones era cierta: dev-17 se arregló con un glosario de cuatro líneas que traduce las claves en inglés del estado (`fog_lights` = antiniebla). Lo detecté al pedirle que releyera el campo `why` completo y el formato real de `{{vehicle_context}}` en `cpbench/vehicle.py`.
 
-**Porcentaje aproximado del texto final del system prompt que escribió la IA sin cambios:** [COMPLETAR]
+**Porcentaje aproximado del texto final del system prompt que escribió la IA sin cambios:** 80%
+
+La IA redactó gran parte de las instrucciones, pero yo revisé las propuestas, identifiqué qué cambios funcionaban, decidí cuáles conservar y realicé las pruebas y los envíos finales.
 
 Opcional: exporta las conversaciones a `logs/`.

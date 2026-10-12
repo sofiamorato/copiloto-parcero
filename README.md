@@ -6,10 +6,10 @@
 | --- | --- |
 | Equipo (como aparece en la tabla) | `sofia_morato` |
 | Integrantes | Sofía Morato |
-| Video (inglés, máx. 3 min) | [COMPLETAR enlace] |
-| Puntaje final del set oculto | [COMPLETAR con el último envío] |
+| Video (inglés, máx. 3 min) | https://youtu.be/i47AfKVWh5o |
+| Puntaje final del set oculto | **52,7** (último envío, v7; tareas 46,9, voz 76,0). Mejor envío: 65,1. Dos envíos (55,1 y 52,7) quedaron afectados por errores 429 del servidor del modelo |
 
-**Qué funciona y qué no:** el prompt traduce las claves en inglés del estado del carro a las palabras que usa la persona (`fog_lights` = antiniebla) y convierte cada política en una secuencia de llamadas; eso resolvió los conflictos de luces y el desempañador. Todavía falla de forma intermitente en peticiones de varios pasos, y el puntaje público (~88) sobreestima el oculto (~64): con un solo intento por caso, el modelo varía ±3 puntos entre envíos.
+**Qué funciona y qué no:** el prompt traduce las claves en inglés del estado del carro a las palabras que usa la persona (`fog_lights` = antiniebla) y convierte cada política en una secuencia de llamadas; eso resolvió los conflictos de luces y el desempañador. Todavía falla de forma intermitente en peticiones de varios pasos, y el puntaje público (~88) sobreestima el oculto (55 a 65), y el oculto varía hasta 10 puntos con el mismo prompt: cada caso corre una sola vez y varios envíos se perdieron por errores 429 del proveedor del modelo (ver `eval/registro.md`).
 
 Evidencia: historial de versiones y análisis en [`eval/registro.md`](eval/registro.md), prompts de cada versión en [`eval/prompts/`](eval/prompts/), corridas en [`eval/runs/`](eval/runs/), casos propios en [`eval/mis_casos.jsonl`](eval/mis_casos.jsonl), [`REFLEXION.md`](REFLEXION.md) y [`AI_LOG.md`](AI_LOG.md).
 

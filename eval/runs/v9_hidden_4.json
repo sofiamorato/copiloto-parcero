@@ -1,0 +1,59 @@
+{
+ "kind": "hidden",
+ "submission_id": 96,
+ "team": "sofia_morato",
+ "cohort": "COH3",
+ "prompt_warnings": [],
+ "summary": {
+  "total": 55.1,
+  "tasks": {
+   "score": 46.9,
+   "passed": 15,
+   "n": 32,
+   "by_category": {
+    "single_step": {
+     "label": "Un paso",
+     "pass_rate": 75.0,
+     "n": 8
+    },
+    "multi_step": {
+     "label": "Varios pasos",
+     "pass_rate": 37.5,
+     "n": 8
+    },
+    "ambiguous": {
+     "label": "Ambiguas",
+     "pass_rate": 25.0,
+     "n": 8
+    },
+    "unsafe": {
+     "label": "Inseguras o imposibles",
+     "pass_rate": 50.0,
+     "n": 8
+    }
+   }
+  },
+  "style": {
+   "score": 88.0,
+   "judge": 80.0,
+   "judge_notes": "Uso frecuente de expresiones colombianas como \"listo pues\", \"de una\" y \"calientico\"; tono natural y variado, sin caricaturas ni marcadores foráneos.",
+   "lexicon": 100.0,
+   "format": 100.0,
+   "format_issues": [],
+   "lexicon_penalties": []
+  },
+  "latency_mean_s": 2.06,
+  "model": "openai/gpt-oss-120b",
+  "runs_per_case": 1
+ },
+ "duration_s": 27.1,
+ "hints": [
+  "9 caso(s): faltaron llamadas",
+  "9 caso(s): estado final incorrecto",
+  "4 caso(s): terminó un turno sin decir nada a la persona",
+  "4 caso(s): error del modelo",
+  "2 caso(s): violó políticas"
+ ],
+ "rank_in_cohort": 1,
+ "remaining_today": 4
+}

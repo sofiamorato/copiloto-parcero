@@ -2,11 +2,11 @@
 
 **Equipo:** sofia_morato  
 **Integrantes:** Sofía Morato  
-**Puntaje final en el set oculto:** [COMPLETAR con el último envío]
+**Puntaje final en el set oculto:** 52,7 (último envío, v7). Mejor envío: 65,1.
 
 ## Qué quería lograr
 
-En el taller el asistente sonaba neutro, "de manual", y fallaba en las secuencias de las políticas: prendía las exploradoras sin las bajas o decía que había desempañado sin llamar las herramientas. Quería dos cosas: que sonara colombiano sin caricatura y que convirtiera cada política en pasos concretos. [COMPLETAR: algo que te haya llamado la atención en el taller]
+En el taller el asistente sonaba neutro, "de manual", y fallaba en las secuencias de las políticas: prendía las exploradoras sin las bajas o decía que había desempañado sin llamar las herramientas. Quería dos cosas: que sonara colombiano sin caricatura y que convirtiera cada política en pasos concretos. Me llamó la atención que cambios tan pequeños en las instrucciones pudieran afectar tanto las respuestas del asistente, incluso cuando parecían estar bien escritas.
 
 ## Qué cambié y qué pasó
 
@@ -16,12 +16,12 @@ En el taller el asistente sonaba neutro, "de manual", y fallaba en las secuencia
 
 ## Dónde la IA me ayudó y dónde me engañó
 
-Me ayudó a leer los JSON caso por caso y a encontrar el glosario faltante. Me engañó cuando atribuyó a la "variancia del modelo" dos fallos que en realidad eran `HTTP 429` del servidor: el error estaba en el campo `why` y nadie lo leyó completo. Desde entonces separo los fallos de infraestructura antes de comparar versiones.
+Me ayudó a leer los JSON caso por caso y a encontrar el glosario faltante. Me engañó cuando atribuyó a la "variancia del modelo" dos fallos que en realidad eran `HTTP 429` del servidor: el error estaba en el campo `why` y nadie lo leyó completo. Desde entonces separo los fallos de infraestructura antes de comparar versiones. Aun así me volvió a pasar al final: mi último envío (el mismo prompt que había dado 63,9) sacó 52,7 porque 4 de 32 casos murieron por el mismo error 429, y ya no quedaban envíos.
 
 ## Qué haría con un segundo día
 
-Correr cada versión 5 veces o más y comparar fallos por caso, no totales: con el mismo prompt el modelo varía entre 17 y 20 de 20. También montaría un modelo local para correr mis 12 casos propios (`eval/mis_casos.jsonl`), que hoy solo sirven como especificación. [COMPLETAR]
+Correr cada versión 5 veces o más y comparar fallos por caso, no totales: con el mismo prompt el modelo varía entre 17 y 20 de 20. También montaría un modelo local para correr mis 12 casos propios (`eval/mis_casos.jsonl`), que hoy solo sirven como especificación. También probaría más formas de pedir lo mismo, porque en la vida real las personas no siempre usan las palabras exactas que uno espera.
 
 ## Qué aprendí sobre los asistentes en el carro, o sobre cómo trabajo yo
 
-Un puntaje alto en el set público no garantizaba nada: ajustar el prompt a 20 casos me costó 25 puntos en el oculto. Lo que sí se transfiere son las reglas generales y que el modelo sepa leer el estado. [COMPLETAR: una frase tuya]
+Un puntaje alto en el set público no garantizaba nada: ajustar el prompt a 20 casos me costó 25 puntos en el oculto. Lo que sí se transfiere son las reglas generales y que el modelo sepa leer el estado. Aprendí que no basta con que un asistente responda bien algunas veces; lo importante es que sea consistente, entienda lo que se le pide y no tome decisiones cuando falta información.
